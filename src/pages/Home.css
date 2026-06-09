@@ -1,0 +1,266 @@
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ── Hero ──────────────────────────────────────── */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 62vh;
+  background: url('/city.jpg') center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 18, 32, 0.65);
+}
+
+.hero-text {
+  position: relative;
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-align: center;
+  padding: 0 24px;
+}
+
+/* ── Why Choose Us ─────────────────────────────── */
+.why-section {
+  padding: 64px 48px;
+  background: var(--white);
+}
+
+.section-title {
+  text-align: center;
+  color: var(--cyan);
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 36px;
+}
+
+/* Stepper card wraps both the tabs row and tab content */
+.stepper-card {
+  border: 1px solid var(--border);
+}
+
+/* Tab row */
+.stepper {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid var(--border);
+  background: #f7f7f7;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 14px 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  outline: none;
+}
+
+.step-num {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1.5px solid #bbb;
+  color: #aaa;
+  flex-shrink: 0;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.step.active .step-num {
+  background: var(--cyan);
+  border-color: var(--cyan);
+  color: var(--white);
+}
+
+.step-label {
+  font-size: 14px;
+  color: #aaa;
+  transition: color 0.2s, font-weight 0.1s;
+}
+
+.step.active .step-label {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.step-line {
+  flex: 1;
+  height: 1px;
+  background: #ccc;
+  min-width: 40px;
+}
+
+/* Tab content area */
+.tab-content {
+  padding: 28px 32px;
+  background: var(--white);
+}
+
+.tab-content img {
+  max-width: 100%;
+  max-height: 280px;
+  width: auto;
+  margin: 0 auto 24px;
+  display: block;
+}
+
+.tab-content p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text);
+  text-align: justify;
+}
+
+/* ── Contact ───────────────────────────────────── */
+.contact-section {
+  padding: 64px 48px;
+  background: var(--white);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 45% 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.contact-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-block {
+  text-align: center;
+}
+
+.contact-block h3 {
+  color: var(--cyan);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.contact-block p {
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.65;
+}
+
+.contact-phone {
+  color: var(--cyan) !important;
+  font-size: 1.4rem !important;
+  font-weight: 600 !important;
+  margin-top: 4px !important;
+}
+
+.contact-email {
+  display: block;
+  color: var(--cyan);
+  font-size: 14px;
+  margin-top: 2px;
+  transition: opacity 0.2s;
+}
+
+.contact-email:hover {
+  opacity: 0.8;
+}
+
+.contact-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 4px 0;
+}
+
+.contact-hours-text {
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  color: var(--text) !important;
+}
+
+/* ── Mobile ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 45vh;
+  }
+
+  .hero-text {
+    font-size: 1.45rem;
+  }
+
+  .why-section,
+  .contact-section {
+    padding: 40px 20px;
+  }
+
+  .stepper {
+    overflow-x: auto;
+    padding: 0 8px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .step {
+    padding: 12px 10px;
+    flex-shrink: 0;
+  }
+
+  .tab-content {
+    padding: 20px 16px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .contact-image {
+    max-height: 220px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text {
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+    margin-bottom: 24px;
+  }
+
+  .tab-content p {
+    font-size: 14px;
+  }
+}

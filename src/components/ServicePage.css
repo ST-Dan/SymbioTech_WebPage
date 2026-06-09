@@ -1,0 +1,133 @@
+/* ── Page Hero Banner ─────────────────────────── */
+.page-hero {
+  width: 100%;
+  min-height: 50vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 20, 35, 0.68);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: clamp(24px, 4vh, 52px);
+}
+
+.page-hero-title {
+  color: #fff;
+  font-size: clamp(1.4rem, 3vw, 2.4rem);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin: 0;
+}
+
+/* ── Page Content ─────────────────────────────── */
+.page-content {
+  padding: 56px 48px 72px;
+}
+
+.page-subtitle {
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.75;
+  margin-bottom: 44px;
+  max-width: 740px;
+}
+
+/* ── Section ──────────────────────────────────── */
+.page-section {
+  margin-bottom: 48px;
+}
+
+.page-section-heading {
+  color: var(--cyan);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── Services Grid ────────────────────────────── */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 48px;
+}
+
+.services-grid--single {
+  grid-template-columns: 1fr;
+  max-width: 740px;
+}
+
+.service-item {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text);
+  padding-left: 14px;
+  border-left: 3px solid var(--cyan);
+}
+
+.service-label {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+/* ── Brands (Robots page) ─────────────────────── */
+.brands-section {
+  margin-bottom: 40px;
+}
+
+.brands-section h2 {
+  color: var(--cyan);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.brands-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.brands-list li {
+  background: #f4f4f4;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 6px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+/* ── Two-column section (Consultations) ────────── */
+.two-col-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-top: 8px;
+}
+
+.two-col-section h2 {
+  color: var(--cyan);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.two-col-section .service-item {
+  margin-bottom: 16px;
+}
